@@ -1,0 +1,997 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="UTF-8">
+    <title>Periodic Table of the Elements</title>
+    <link rel="stylesheet" href="responsive.css">
+</head>
+
+<body>
+    <h1>Periodic Table of the Elements</h1>
+
+<div class="picture">
+    <img src="data:image/jpeg;base64,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" alt="dimitri" >
+    <h2>by Dimitri Mendeleïev</h2>
+    <br>
+</div>
+    <div class="full_table" contenteditable="true">
+        <div class="periodRow" id="r1">
+            <div class="element hydrogen">
+                <div class="number">1</div>
+                <div class="mass">1.008</div>
+                <div class="symbol">H</div>
+    
+            </div>
+            <div class="element invisible">
+                <div class="number">&nbsp</div>
+                <div class="mass">&nbsp</div>
+                <div class="symbol">&nbsp</div>
+    
+            </div>
+            <div class="element invisible">
+                <div class="number">&nbsp</div>
+                <div class="mass">&nbsp</div>
+                <div class="symbol">&nbsp</div>
+    
+            </div>
+            <div class="element invisible">
+                <div class="number">&nbsp</div>
+                <div class="mass">&nbsp</div>
+                <div class="symbol">&nbsp</div>
+    
+            </div>
+            <div class="element invisible">
+                <div class="number">&nbsp</div>
+                <div class="mass">&nbsp</div>
+                <div class="symbol">&nbsp</div>
+    
+            </div>
+            <div class="element invisible">
+                <div class="number">&nbsp</div>
+                <div class="mass">&nbsp</div>
+                <div class="symbol">&nbsp</div>
+    
+            </div>
+            <div class="element invisible">
+                <div class="number">&nbsp</div>
+                <div class="mass">&nbsp</div>
+                <div class="symbol">&nbsp</div>
+    
+            </div>
+            <div class="element invisible">
+                <div class="number">&nbsp</div>
+                <div class="mass">&nbsp</div>
+                <div class="symbol">&nbsp</div>
+    
+            </div>
+            <div class="element invisible">
+                <div class="number">&nbsp</div>
+                <div class="mass">&nbsp</div>
+                <div class="symbol">&nbsp</div>
+    
+            </div>
+            <div class="element invisible">
+                <div class="number">&nbsp</div>
+                <div class="mass">&nbsp</div>
+                <div class="symbol">&nbsp</div>
+    
+            </div>
+            <div class="element invisible">
+                <div class="number">&nbsp</div>
+                <div class="mass">&nbsp</div>
+                <div class="symbol">&nbsp</div>
+    
+            </div>
+            <div class="element invisible">
+                <div class="number">&nbsp</div>
+                <div class="mass">&nbsp</div>
+                <div class="symbol">&nbsp</div>
+    
+            </div>
+            <div class="element invisible">
+                <div class="number">&nbsp</div>
+                <div class="mass">&nbsp</div>
+                <div class="symbol">&nbsp</div>
+    
+            </div>
+            <div class="element invisible">
+                <div class="number">&nbsp</div>
+                <div class="mass">&nbsp</div>
+                <div class="symbol">&nbsp</div>
+    
+            </div>
+            <div class="element invisible">
+                <div class="number">&nbsp</div>
+                <div class="mass">&nbsp</div>
+                <div class="symbol">&nbsp</div>
+    
+            </div>
+            <div class="element invisible">
+                <div class="number">&nbsp</div>
+                <div class="mass">&nbsp</div>
+                <div class="symbol">&nbsp</div>
+    
+            </div>
+            <div class="element invisible">
+                <div class="number">&nbsp</div>
+                <div class="mass">&nbsp</div>
+                <div class="symbol">&nbsp</div>
+    
+            </div>
+            <div class="element noblegas">
+                <div class="number">2</div>
+                <div class="mass">4.0</div>
+                <div class="symbol">He</div>
+            </div>
+        </div>
+        <div class="periodRow" id="r2">
+            <div class="element alkalimetal">
+                <div class="number">3</div>
+                <div class="mass">6.9</div>
+                <div class="symbol">Li</div>
+
+            </div>
+        <div class="element AlkalineEarthMetals">
+            <div class="number">4</div>
+            <div class="mass">9.0</div>
+            <div class="symbol">Be</div>
+
+        </div>
+        
+        <div class ="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+
+        <div class ="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+
+        <div class ="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+
+        <div class ="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+
+        <div class ="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+
+        <div class ="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+
+        <div class ="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+
+        <div class ="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+
+        <div class ="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+
+        <div class ="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+
+        <div class="element nonmetal">
+            <div class="number">5</div>
+            <div class="mass">10.8</div>
+            <div class="symbol">B</div>
+
+        </div>
+
+        <div class ="element nonmetal">
+            <div class="number">6</div>
+            <div class="mass">12.0</div>
+            <div class="symbol">C</div>
+
+        </div>
+
+        <div class ="element nonmetal">
+            <div class="number">7</div>
+            <div class="mass">17.0</div>
+            <div class="symbol">N</div>
+
+        </div>
+
+        <div class ="element nonmetal">
+            <div class="number">8</div>
+            <div class="mass">16.0</div>
+            <div class="symbol">O</div>
+
+        </div>
+
+        <div class ="element nonmetal">
+            <div class="number">9</div>
+            <div class="mass">19.0</div>
+            <div class="symbol">F</div>
+
+        </div>
+
+        <div class ="element noblegas">
+            <div class="number">10</div>
+            <div class="mass">20.1</div>
+            <div class="symbol">Ne</div>
+
+        </div>
+    </div>
+    <div class="periodRow" id="r3">
+        <div class="element alkalimetal">
+            <div class="number">11</div>
+            <div class="mass">22.99</div>
+            <div class="symbol">Na</div>
+
+        </div>
+        <div class="element AlkalineEarthMetals">
+            <div class="number">12</div>
+            <div class="mass">24.3</div>
+            <div class="symbol">Mg</div>
+
+        </div>
+        <div class="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+        <div class="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+        <div class="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+        <div class="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+        <div class="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+        <div class="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+        <div class="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+        <div class="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+        <div class="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+        <div class="element invisible">
+            <div class="number">&nbsp</div>
+            <div class="mass">&nbsp</div>
+            <div class="symbol">&nbsp</div>
+
+        </div>
+        <div class="element poormetal">
+            <div class="number">13</div>
+            <div class="mass">26.98</div>
+            <div class="symbol">Al</div>
+
+        </div>
+        <div class="element nonmetal">
+            <div class="number">14</div>
+            <div class="mass">28.09</div>
+            <div class="symbol">Si</div>
+
+        </div>
+        <div class="element nonmetal">
+            <div class="number">15</div>
+            <div class="mass">30.97</div>
+            <div class="symbol">P</div>
+
+        </div>
+        <div class="element nonmetal">
+            <div class="number">16</div>
+            <div class="mass">32.07</div>
+            <div class="symbol">S</div>
+
+        </div>
+        <div class="element nonmetal">
+            <div class="number">17</div>
+            <div class="mass">35.45</div>
+            <div class="symbol">Cl</div>
+
+        </div>
+        <div class="element noblegas">
+            <div class="number">18</div>
+            <div class="mass">39.95</div>
+            <div class="symbol">Ar</div>
+
+        </div>
+    </div>
+    <div class="periodRow" id="r4">
+        <div class="element alkalimetal">
+            <div class="number">19</div>
+            <div class="mass">39.10</div>
+            <div class="symbol">K</div>
+
+        </div>
+        <div class="element AlkalineEarthMetals">
+            <div class="number">20</div>
+            <div class="mass">40.08</div>
+            <div class="symbol">Ca</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">21</div>
+            <div class="mass">44.96</div>
+            <div class="symbol">Sc</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">22</div>
+            <div class="mass">47.88</div>
+            <div class="symbol">Ti</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">23</div>
+            <div class="mass">50.94</div>
+            <div class="symbol">V</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">24</div>
+            <div class="mass">52.00</div>
+            <div class="symbol">Cr</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">25</div>
+            <div class="mass">54.94</div>
+            <div class="symbol">Mn</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">26</div>
+            <div class="mass">55.85</div>
+            <div class="symbol">Fe</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">27</div>
+            <div class="mass">58.93</div>
+            <div class="symbol">Co</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">28</div>
+            <div class="mass">58.69</div>
+            <div class="symbol">Ni</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">29</div>
+            <div class="mass">63.55</div>
+            <div class="symbol">Cu</div>
+
+        </div>
+        <div class="element poormetal">
+            <div class="number">30</div>
+            <div class="mass">65.39</div>
+            <div class="symbol">Zn</div>
+
+        </div>
+        <div class="element poormetal">
+            <div class="number">31</div>
+            <div class="mass">69.72</div>
+            <div class="symbol">Ga</div>
+
+        </div>
+        <div class="element poormetal">
+            <div class="number">32</div>
+            <div class="mass">72.61</div>
+            <div class="symbol">Ge</div>
+
+        </div>
+        <div class="element nonmetal">
+            <div class="number">33</div>
+            <div class="mass">74.92</div>
+            <div class="symbol">As</div>
+
+        </div>
+        <div class="element nonmetal">
+            <div class="number">34</div>
+            <div class="mass">78.96</div>
+            <div class="symbol">Se</div>
+
+        </div>
+        <div class="element nonmetal">
+            <div class="number">35</div>
+            <div class="mass">79.90</div>
+            <div class="symbol">Br</div>
+
+        </div>
+        <div class="element noblegas">
+            <div class="number">36</div>
+            <div class="mass">83.8</div>
+            <div class="symbol">Kr</div>
+
+        </div>
+    </div>
+    <div class="periodRow" id="r5">
+        <div class="element alkalimetal">
+            <div class="number">37</div>
+            <div class="mass">85.47</div>
+            <div class="symbol">Rb</div>
+
+        </div>
+        <div class="element AlkalineEarthMetals">
+            <div class="number">38</div>
+            <div class="mass">87.62</div>
+            <div class="symbol">Sr</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">39</div>
+            <div class="mass">88.91</div>
+            <div class="symbol">Y</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">40</div>
+            <div class="mass">91.22</div>
+            <div class="symbol">Zr</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">41</div>
+            <div class="mass">92.91</div>
+            <div class="symbol">Nb</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">42</div>
+            <div class="mass">95.94</div>
+            <div class="symbol">Mo</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">43</div>
+            <div class="mass">97.9</div>
+            <div class="symbol">Tc</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">44</div>
+            <div class="mass">101.97</div>
+            <div class="symbol">Ru</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">45</div>
+            <div class="mass">102.91</div>
+            <div class="symbol">Rh</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">46</div>
+            <div class="mass">106.42</div>
+            <div class="symbol">Pd</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">47</div>
+            <div class="mass">107.87</div>
+            <div class="symbol">Ag</div>
+
+        </div>
+        <div class="element poormetal">
+            <div class="number">48</div>
+            <div class="mass">112.41</div>
+            <div class="symbol">Cd</div>
+
+        </div>
+        <div class="element poormetal">
+            <div class="number">49</div>
+            <div class="mass">114.8</div>
+            <div class="symbol">In</div>
+
+        </div>
+        <div class="element poormetal">
+            <div class="number">50</div>
+            <div class="mass">118.7</div>
+            <div class="symbol">Sn</div>
+
+        </div>
+        <div class="element poormetal">
+            <div class="number">51</div>
+            <div class="mass">121.8</div>
+            <div class="symbol">Sb</div>
+
+        </div>
+        <div class="element nonmetal">
+            <div class="number">52</div>
+            <div class="mass">127.6</div>
+            <div class="symbol">Te</div>
+
+        </div>
+        <div class="element nonmetal">
+            <div class="number">53</div>
+            <div class="mass">126.91</div>
+            <div class="symbol">I</div>
+
+        </div>
+        <div class="element noblegas">
+            <div class="number">54</div>
+            <div class="mass">131.29</div>
+            <div class="symbol">Xe</div>
+
+        </div>
+    </div>
+    <div class="periodRow" id="r6">
+        <div class="element alkalimetal">
+            <div class="number">55</div>
+            <div class="mass">132.9</div>
+            <div class="symbol">Cs</div>
+
+        </div>
+        <div class="element AlkalineEarthMetals">
+            <div class="number">56</div>
+            <div class="mass">137.3</div>
+            <div class="symbol">Ba</div>
+
+        </div>
+        <div class="element lanthanide">
+            <div class="number"></div>
+            <div class="mass"></div>
+            <div class="symbol">&darr;</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">72</div>
+            <div class="mass">178.5</div>
+            <div class="symbol">Hf</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">73</div>
+            <div class="mass">180.9</div>
+            <div class="symbol">Ta</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">74</div>
+            <div class="mass">183.8</div>
+            <div class="symbol">W</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">75</div>
+            <div class="mass">186.2</div>
+            <div class="symbol">Re</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">76</div>
+            <div class="mass">190.2</div>
+            <div class="symbol">Os</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">77</div>
+            <div class="mass">192.8</div>
+            <div class="symbol">Pt</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">78</div>
+            <div class="mass">195.1</div>
+            <div class="symbol">Pt</div>
+
+        </div>
+        <div class="element transmetal">
+            <div class="number">79</div>
+            <div class="mass">196.96</div>
+            <div class="symbol">Au</div>
+
+        </div>
+        <div class="element poormetal">
+            <div class="number">80</div>
+            <div class="mass">200.6</div>
+            <div class="symbol">Hg</div>
+
+        </div>
+        <div class="element poormetal">
+            <div class="number">81</div>
+            <div class="mass">204.4</div>
+            <div class="symbol">Tl</div>
+
+        </div>
+        <div class="element poormetal">
+            <div class="number">82</div>
+            <div class="mass">207.2</div>
+            <div class="symbol">Pb</div>
+
+        </div>
+        <div class="element poormetal">
+            <div class="number">83</div>
+            <div class="mass">208.98</div>
+            <div class="symbol">Bi</div>
+
+        </div>
+        <div class="element poormetal">
+            <div class="number">84</div>
+            <div class="mass">209</div>
+            <div class="symbol">Po</div>
+
+        </div>
+        <div class="element nonmetal">
+            <div class="number">85</div>
+            <div class="mass">210</div>
+            <div class="symbol">At</div>
+
+        </div>
+        <div class="element noblegas">
+            <div class="number">86</div>
+            <div class="mass">22</div>
+            <div class="symbol">Rn</div>
+
+        </div>
+    </div>
+    <div class="periodRow" id="r7">
+    <div class="element alkalimetal">
+        <div class="number">87</div>
+        <div class="mass">223</div>
+        <div class="symbol">Fr</div>
+
+    </div>
+    <div class="element AlkalineEarthMetals">
+        <div class="number">88</div>
+        <div class="mass">226</div>
+        <div class="symbol">Ra</div>
+
+    </div>
+    <div class="element actinide">
+        <div class="number"></div>
+        <div class="mass"></div>
+        <div class="symbol">&darr;</div>
+
+    </div>
+    <div class="element transmetal">
+        <div class="number">104</div>
+        <div class="mass">261</div>
+        <div class="symbol">Rf</div>
+
+    </div>
+    <div class="element transmetal">
+        <div class="number">105</div>
+        <div class="mass">262</div>
+        <div class="symbol">Db</div>
+
+    </div>
+    <div class="element transmetal">
+        <div class="number">106</div>
+        <div class="mass">266</div>
+        <div class="symbol">Sg</div>
+
+    </div>
+    <div class="element transmetal">
+        <div class="number">107</div>
+        <div class="mass">264</div>
+        <div class="symbol">Bh</div>
+
+    </div>
+    <div class="element transmetal">
+        <div class="number">108</div>
+        <div class="mass">277</div>
+        <div class="symbol">Hs</div>
+
+    </div>
+    <div class="element transmetal">
+        <div class="number">109</div>
+        <div class="mass">268</div>
+        <div class="symbol">Mt</div>
+
+    </div>
+    <div class="element transmetal">
+        <div class="number">110</div>
+        <div class="mass">281</div>
+        <div class="symbol">Ds</div>
+
+    </div>
+    <div class="element transmetal">
+        <div class="number">111</div>
+        <div class="mass">282</div>
+        <div class="symbol">Rg</div>
+
+    </div>
+    <div class="element poormetal">
+        <div class="number">112</div>
+        <div class="mass">285</div>
+        <div class="symbol">Cn</div>
+
+    </div>
+    <div class="element poormetal">
+        <div class="number">113</div>
+        <div class="mass">286</div>
+        <div class="symbol">Nh</div>
+
+    </div>
+    <div class="element poormetal">
+        <div class="number">114</div>
+        <div class="mass">289</div>
+        <div class="symbol">Fl</div>
+
+    </div>
+    <div class="element poormetal">
+        <div class="number">115</div>
+        <div class="mass">290</div>
+        <div class="symbol">Mc</div>
+
+    </div>
+    <div class="element poormetal">
+        <div class="number">116</div>
+        <div class="mass">293</div>
+        <div class="symbol">Lv</div>
+
+    </div>
+    <div class="element synthetic">
+        <div class="number">117</div>
+        <div class="mass">294</div>
+        <div class="symbol">Ts</div>
+
+    </div>
+    <div class="element noblegas">
+        <div class="number">118</div>
+        <div class="mass">29</div>
+        <div class="symbol">Og</div>
+
+    </div>
+</div>
+<div class="periodRow" id="r8">
+    <div class="element invisible">
+        <div class="number">&nbsp</div>
+        <div class="mass">&nbsp</div>
+        <div class="symbol">&nbsp</div>
+        </div>
+    </div>
+
+    <div class="periodRow" id="r9">
+        <div class="element lanthanide">
+            <div class="number">57</div>
+            <div class="mass">138.9</div>
+            <div class="symbol">La</div>
+
+        </div>
+        <div class="element lanthanide">
+            <div class="number">58</div>
+            <div class="mass">140.1</div>
+            <div class="symbol">Ce</div>
+
+        </div>
+        <div class="element lanthanide">
+            <div class="number">59</div>
+            <div class="mass">140.9</div>
+            <div class="symbol">Pr</div>
+
+        </div>
+        <div class="element lanthanide">
+            <div class="number">60</div>
+            <div class="mass">144.2</div>
+            <div class="symbol">Nd</div>
+
+        </div>
+        <div class="element lanthanide">
+            <div class="number">61</div>
+            <div class="mass">145</div>
+            <div class="symbol">Pm</div>
+
+        </div>
+        <div class="element lanthanide">
+            <div class="number">62</div>
+            <div class="mass">150.4</div>
+            <div class="symbol">Sm</div>
+
+        </div>
+        <div class="element lanthanide">
+            <div class="number">63</div>
+            <div class="mass">151.9</div>
+            <div class="symbol">Eu</div>
+
+        </div>
+        <div class="element lanthanide">
+            <div class="number">64</div>
+            <div class="mass">157.3</div>
+            <div class="symbol">Gd</div>
+
+        </div>
+        <div class="element lanthanide">
+            <div class="number">65</div>
+            <div class="mass">158.9</div>
+            <div class="symbol">Tb</div>
+
+        </div>
+        <div class="element lanthanide">
+            <div class="number">66</div>
+            <div class="mass">162.5</div>
+            <div class="symbol">Dy</div>
+
+        </div>
+        <div class="element lanthanide">
+            <div class="number">67</div>
+            <div class="mass">164.9</div>
+            <div class="symbol">Ho</div>
+
+        </div>
+        <div class="element lanthanide">
+            <div class="number">68</div>
+            <div class="mass">167.3</div>
+            <div class="symbol">Hr</div>
+
+        </div>
+        <div class="element lanthanide">
+            <div class="number">69</div>
+            <div class="mass">168.9</div>
+            <div class="symbol">Tm</div>
+
+        </div>
+        <div class="element lanthanide">
+            <div class="number">70</div>
+            <div class="mass">173.04</div>
+            <div class="symbol">Yb</div>
+
+        </div>
+        <div class="element lanthanide">
+            <div class="number">71</div>
+            <div class="mass">174.98</div>
+            <div class="symbol">Lu</div>
+
+        </div>
+    </div>
+    <div class="periodRow" id="r10">
+        <div class="element actinide">
+            <div class="number">89</div>
+            <div class="mass">227</div>
+            <div class="symbol">Ac</div>
+
+        </div>
+        <div class="element actinide">
+            <div class="number">90</div>
+            <div class="mass">232.0</div>
+            <div class="symbol">Th</div>
+
+        </div>
+        <div class="element actinide">
+            <div class="number">91</div>
+            <div class="mass">231.0</div>
+            <div class="symbol">Pa</div>
+
+        </div>
+        <div class="element actinide">
+            <div class="number">92</div>
+            <div class="mass">238.0</div>
+            <div class="symbol">U</div>
+
+        </div>
+        <div class="element actinide">
+            <div class="number">93</div>
+            <div class="mass">237</div>
+            <div class="symbol">Np</div>
+
+        </div>
+        <div class="element actinide">
+            <div class="number">94</div>
+            <div class="mass">244</div>
+            <div class="symbol">Pu</div>
+
+        </div>
+        <div class="element actinide">
+            <div class="number">95</div>
+            <div class="mass">243</div>
+            <div class="symbol">Am</div>
+
+        </div>
+        <div class="element actinide">
+            <div class="number">96</div>
+            <div class="mass">247</div>
+            <div class="symbol">Cm</div>
+
+        </div>
+        <div class="element actinide">
+            <div class="number">97</div>
+            <div class="mass">247</div>
+            <div class="symbol">Bk</div>
+
+        </div>
+        <div class="element actinide">
+            <div class="number">98</div>
+            <div class="mass">251</div>
+            <div class="symbol">Cf</div>
+
+        </div>
+        <div class="element actinide">
+            <div class="number">99</div>
+            <div class="mass">252</div>
+            <div class="symbol">Es</div>
+
+        </div>
+        <div class="element actinide">
+            <div class="number">100</div>
+            <div class="mass">257</div>
+            <div class="symbol">Fm</div>
+
+        </div>
+        <div class="element actinide">
+            <div class="number">101</div>
+            <div class="mass">258</div>
+            <div class="symbol">Md</div>
+
+        </div>
+        <div class="element actinide">
+            <div class="number">102</div>
+            <div class="mass">259</div>
+            <div class="symbol">No</div>
+
+        </div>
+        <div class="element actinide">
+            <div class="number">103</div>
+            <div class="mass">262</div>
+            <div class="symbol">Lr</div>
+
+        </div>
+    </div>
+</div>
+</body>
+</html>
