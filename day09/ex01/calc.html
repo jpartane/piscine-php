@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Calculator</title>
+    <body>
+        <h1>Calculator</h1>
+
+        <input type="text" id="leftnbr" size="10">
+        <select id="operator">
+            <option value="plus">+</option>
+            <option value="minus">-</option>
+            <option value="divide">/</option>
+            <option value="multiply">*</option>
+            <option value="modulo">%</option>
+        </select>
+        <input type="text" id="rightnbr" size="10">
+        <button type="button" onclick="calc()">Try me!</button>
+    </body>
+    <script>
+        setTimeout(function(){alert("Please, use me...");},30000);
+        const isInt = (nbr) => nbr % 1 === 0;
+        function calc()
+        {
+            let a = Number(document.querySelector("#leftnbr").value);
+            let b = Number(document.querySelector("#rightnbr").value);
+            let op = (document.querySelector("#operator").value);
+            let result
+
+            if (a < 0 || b < 0 ) {
+                alert("Error :(");
+                return ;
+            }
+            if (isInt(a) && isInt(b))
+            {
+                if (op == "plus") {
+                    result = a + b;
+                    console.log(result);
+                    alert(result);
+                } else if (op == "minus") {
+                    result = a - b;
+                    console.log(result);
+                    alert(result);
+                } else if (op == "divide") {
+                    if (b == 0) {
+                        console.log(result);
+                        alert("Its over 9000!");
+                        return ;
+                    }
+                    result = a / b;
+                    console.log(result);
+                    alert(result);
+                } else if (op == "multiply") {
+                    result = a * b;
+                    console.log(result);
+                    alert(result);
+                } else if (op == "modulo") {
+                    if (b == 0) {
+                        console.log(result);
+                        alert("Its over 9000!");
+                        return ;
+                    } else {
+                    result = a % b;
+                    console.log(result);
+                    alert(result);
+                    }
+                }
+                } else {
+                    alert("Error :(");
+                }
+            }    
+    </script>
+    </head>
+</html>

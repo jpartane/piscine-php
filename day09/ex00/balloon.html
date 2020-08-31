@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Javascript</title>
+
+    <style>
+
+    
+
+    #balloon{
+        position: absolute;
+        width: 200px;
+        height: 200px;
+        cursor: pointer;
+        z-index: 15;
+        top: 45%;
+        left: 50%;
+        margin: -100px 0 0 -150px;
+        background: red;
+        border-radius: 50%;
+    }
+    </style>
+    </head>
+<body>
+
+    <div id="balloon">
+    </div>
+     
+</body>
+<script>
+    let Ball = document.getElementById('balloon');
+    const colors = ['red', 'green', 'blue'];
+    let i = 0;
+
+    Ball.addEventListener("click", () => {
+        ++i;
+        if (i > 2) {
+            i = 0;
+        }
+        Ball.style.background = colors[i];
+        if (Ball.clientHeight < 420) {
+            Ball.style.width = Ball.clientWidth + 10 + 'px';
+            Ball.style.height = Ball.clientHeight + 10 + 'px';
+        } else {
+            Ball.style.width = 200 + 'px';
+            Ball.style.height = 200 + 'px';
+        }
+    })
+    Ball.addEventListener("mouseleave", () => {
+        --i;
+        if (i < 0) {
+        i = 2;
+        }
+        Ball.style.background = colors[Math.abs(i)];
+
+        if (Ball.clientHeight > 200) {
+            Ball.style.width = Ball.clientWidth - 5 + 'px';
+            Ball.style.height = Ball.clientHeight - 5 + 'px';
+        }
+    })
+        
+
+</script>
+</html>
